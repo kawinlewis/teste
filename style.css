@@ -1,0 +1,140 @@
+/* Estilo base (já existente) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 10000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #E91C5D;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.table-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-adicionar, .btn-remover {
+    background-color: #E91C5D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 20px 10px;
+}
+
+.btn-adicionar:hover, .btn-remover:hover {
+    background-color: #c2185b;
+}
+
+/* Adicionando Media Query para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Ajustando largura da tabela */
+    .table-container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px; /* Reduz o tamanho da fonte da tabela para telas pequenas */
+    }
+
+    th, td {
+        padding: 5px; /* Reduz o espaçamento das células */
+    }
+
+    /* Ajustando os inputs para ficarem mais acessíveis em telas pequenas */
+    input[type="number"], input[type="text"] {
+        padding: 8px; /* Aumenta o tamanho do campo para facilitar a digitação */
+        font-size: 14px;
+    }
+
+    /* Tornando os botões mais acessíveis em telas menores */
+    .btn-adicionar, .btn-remover {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%; /* Faz os botões ocuparem toda a largura */
+        margin: 10px 0; /* Deixa mais espaçado */
+    }
+
+    /* Melhorando a visibilidade e o uso da barra de navegação no footer */
+    footer {
+        position: static; /* Retira a fixação para que o footer não sobreponha o conteúdo */
+    }
+}

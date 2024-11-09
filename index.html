@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAP - BOLETIM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>FIAP - Calcula Boletim</h1>
+</header>
+
+<main>
+    <button class="btn-adicionar" onclick="adicionarLinha()">Adicionar Disciplina</button>
+    <button class="btn-remover" onclick="removerLinha()">Remover Última Linha</button>
+
+    <div class="table-container">
+        <table id="quadro-avaliacao-1">
+            <thead>
+                <tr>
+                    <th>DISCIPLINA</th>
+                    <th>Checkpoint 1</th>
+                    <th>Checkpoint 2</th>
+                    <th>Checkpoint 3</th>
+                    <th>Sprint 1</th>
+                    <th>Sprint 2</th>
+                    <th>N1</th>
+                    <th>Global Solution</th>
+                    <th>N2</th>
+                    <th>MÉDIA FINAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="disciplina" placeholder="Nome da Disciplina"></td>
+                    <td><input type="number" min="0" max="10" step="0.1" class="checkpoint" data-checkpoint="1"></td>
+                    <td><input type="number" min="0" max="10" step="0.1" class="checkpoint" data-checkpoint="2"></td>
+                    <td><input type="number" min="0" max="10" step="0.1" class="checkpoint" data-checkpoint="3"></td>
+                    <td><input type="number" min="0" max="10" step="0.1" class="sprint" data-sprint="1"></td>
+                    <td><input type="number" min="0" max="10" step="0.1" class="sprint" data-sprint="2"></td>
+                    <td><span class="n1">0.0</span></td>
+                    <td><input type="number" min="0" max="10" step="0.1" class="global-solution"></td>
+                    <td><span class="n2">0.0</span></td>
+                    <td><span class="media-final">0.0</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Calcula Boletim © | Todos os direitos reservados. | Desenvolvido por <a href="https://www.linkedin.com/in/kawinlewis/" target="_blank" style="color: #E91C5D; text-decoration: none;">Bernini</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
